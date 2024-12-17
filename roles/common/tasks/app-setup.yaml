@@ -1,6 +1,6 @@
 - name: roboshop user creation
-    ansible.builtin.user:
-      name: roboshop
+  ansible.builtin.user:
+    name: roboshop
 
 - name: create app directory
   ansible.builtin.file:
