@@ -7,6 +7,6 @@
     state: present
 
  - name: install dependencies
-  ansible.builtin.command: npm install
-  args:
+   ansible.builtin.command: npm install
+   args:
     chdir: /app
