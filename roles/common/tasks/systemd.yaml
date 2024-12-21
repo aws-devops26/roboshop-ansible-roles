@@ -1,6 +1,6 @@
 - name: copy catalogue service
-  ansible.builtin.template:
-    src: catalogue.service.j2
+  ansible.builtin.templates:
+    src: catalogue.service
     dest: /etc/systemd/system/catalogue.service
 
 - name: demon reload and start
