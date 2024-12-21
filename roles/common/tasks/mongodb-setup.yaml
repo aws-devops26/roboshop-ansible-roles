@@ -15,7 +15,7 @@
 
 - name: "get the user entries count"
   ansible.builtin.shell:  mongo --host {{MONGODB_HOST}} --quiet --eval 'db = db.getSiblingDB("users"); db.users.count()'
-  register: entries_count
+  register: users_count
   when: component == "user"
 
 # - name: print the count
