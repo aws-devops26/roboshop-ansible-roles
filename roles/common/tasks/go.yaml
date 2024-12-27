@@ -4,7 +4,7 @@
     state: present
 
 - name: build go application
-  ansible.bultin.command: "{{item}}"
+  ansible.builtin.command: "{{item}}"
   loop:
   - cd /app 
   - go mod init dispatch
