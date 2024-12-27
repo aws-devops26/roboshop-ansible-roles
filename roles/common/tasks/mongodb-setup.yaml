@@ -32,9 +32,3 @@
   when: component == "user" and users_count.stdout == "0"  # keep double quotes
   #ignore_errors: true
 
-- name: "load cities data"
-  ansible.builtin.shell: "mysql -h {{MYSQL_HOST}} -uroot -p{{mysql_password}}  < /app/db/master-shipping.sql"
-  when: schema.stdout != "1"
-
-- name: "create shipping user data"
-  ansible.builtin.shell: "mysql -h {{MYSQL_HOST}} -uroot -p{{mysql_password}}  < /app/db/app-data.sql"
